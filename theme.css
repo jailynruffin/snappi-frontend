@@ -1,0 +1,17 @@
+/* Default: Light Mode */
+:root {
+    --bg-color: #fafafa;
+    --text-color: #111;
+    --accent-color: #00078F;
+    --button-text-color: #fff;
+}
+
+/* Auto Dark Mode — responds to user's system preference */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --text-color: #eee;
+        --accent-color: #759CFF;
+        --button-text-color: #000;
+    }
+}

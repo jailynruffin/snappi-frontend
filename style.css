@@ -1,12 +1,24 @@
 body {
-    background-color: #fff0f5;
-    font-family: 'Helvetica Neue', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Comfortaa', sans-serif;
     text-align: center;
-    padding-top: 100px;
-    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    animation: fadeBg 0.5s ease-in;
 }
 
-h1 {
-    font-size: 48px;
-    color: #d63384;
+@keyframes fadeBg {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
+
+/* Step 1: Prepare your elements as invisible */
+#snappiTitle,
+#snappiSubTitle {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Step 2: Animate the title in */
+#snappiTitle {
+    animation: fadeI
